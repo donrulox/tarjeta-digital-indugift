@@ -3,28 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alexis Adones · Indugift Digital</title>
+<title>Alexis Adones · Sinapia Web</title>
+<meta name="description" content="Sitios web, agentes con IA y gestión de redes para negocios de La Araucanía y el Biobío.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-a:#F3F0FC;
-    --bg-b:#EAF4FC;
-    --card:#FFFFFF;
-    --navy:#1E2A4A;
-    --navy-soft:#5B6685;
-    --purple:#7B7FE8;
-    --purple-deep:#5D61C9;
-    --magenta:#C23B78;
-    --green:#2FAE7A;
-    --line:rgba(30,42,74,0.08);
+    --bg:#06060a;
+    --bg-glow-a:rgba(124,58,237,0.16);
+    --bg-glow-b:rgba(34,211,238,0.10);
+    --card:rgba(255,255,255,0.035);
+    --ink:#F5F5F7;
+    --ink-soft:#A6A6B8;
+    --line:rgba(196,181,253,0.16);
+    --violet:#A78BFA;
+    --violet-soft:#C4B5FD;
+    --cyan:#22D3EE;
+    --gradient:linear-gradient(90deg, #C4B5FD 0%, #A78BFA 45%, #22D3EE 100%);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   body{
     min-height:100vh;
-    background:linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%);
+    background:
+      radial-gradient(ellipse 600px 400px at 15% -5%, var(--bg-glow-a), transparent 60%),
+      radial-gradient(ellipse 600px 400px at 100% 15%, var(--bg-glow-b), transparent 60%),
+      var(--bg);
     font-family:'Inter', sans-serif;
-    color:var(--navy);
+    color:var(--ink);
     display:flex;
     justify-content:center;
     padding:48px 20px 64px;
@@ -45,43 +51,33 @@
     height:88px;
     border-radius:26px;
     margin:0 auto 18px;
-    background:linear-gradient(145deg, var(--purple) 0%, var(--purple-deep) 100%);
+    background:rgba(124,58,237,0.10);
+    border:1.5px solid var(--line);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-family:'Poppins', sans-serif;
-    font-weight:800;
-    font-size:34px;
-    color:#fff;
-    box-shadow:0 12px 28px -10px rgba(93,97,201,0.55);
     position:relative;
   }
-  .avatar::after{
-    content:"";
-    position:absolute;
-    inset:-6px;
-    border-radius:32px;
-    border:1.5px solid rgba(123,127,232,0.25);
-  }
+  .avatar svg{ width:44px; height:44px; }
   h1{
     font-family:'Poppins', sans-serif;
     font-weight:700;
     font-size:23px;
     letter-spacing:-0.01em;
-    color:var(--navy);
+    color:var(--ink);
   }
   .role{
     font-family:'JetBrains Mono', monospace;
     font-size:12px;
     letter-spacing:0.06em;
-    color:var(--purple-deep);
+    color:var(--violet-soft);
     text-transform:uppercase;
     margin-top:6px;
     font-weight:500;
   }
   .tagline{
     font-size:13.5px;
-    color:var(--navy-soft);
+    color:var(--ink-soft);
     margin-top:10px;
     line-height:1.5;
     max-width:300px;
@@ -95,7 +91,7 @@
     font-size:10.5px;
     letter-spacing:0.1em;
     text-transform:uppercase;
-    color:var(--navy-soft);
+    color:var(--ink-soft);
     margin:26px 4px 10px;
     opacity:0.75;
   }
@@ -111,9 +107,8 @@
     padding:15px 18px;
     margin-bottom:11px;
     text-decoration:none;
-    color:var(--navy);
-    box-shadow:0 1px 2px rgba(30,42,74,0.04);
-    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    color:var(--ink);
+    transition:transform .15s ease, border-color .15s ease;
   }
   .link:active{ transform:scale(0.98); }
 
@@ -133,31 +128,31 @@
   .link-title{
     font-weight:600;
     font-size:14.5px;
-    color:var(--navy);
+    color:var(--ink);
   }
   .link-sub{
     font-size:12px;
-    color:var(--navy-soft);
+    color:var(--ink-soft);
     margin-top:1px;
   }
   .arrow{
     flex:0 0 auto;
-    color:var(--navy-soft);
-    opacity:0.5;
+    color:var(--ink-soft);
+    opacity:0.6;
     font-size:16px;
   }
 
   /* variantes de color por marca */
-  .ic-panoramas{ background:#FDECEF; color:var(--magenta); }
-  .ic-indugift{ background:#EFEEFC; color:var(--purple-deep); }
-  .ic-rupowergy{ background:#EAF7F0; color:var(--green); }
-  .ic-whatsapp{ background:#E7F8EF; color:#25A75A; }
-  .ic-instagram{ background:#FDEEF4; color:#C23B78; }
-  .ic-web{ background:#EAF4FC; color:#2E7DBF; }
+  .ic-panoramas{ background:rgba(251,113,133,0.14); color:#FB7185; }
+  .ic-indugift{ background:rgba(167,139,250,0.14); color:#A78BFA; }
+  .ic-rupowergy{ background:rgba(34,211,238,0.14); color:#22D3EE; }
+  .ic-whatsapp{ background:rgba(52,211,153,0.14); color:#34D399; }
+  .ic-instagram{ background:rgba(244,114,182,0.14); color:#F472B6; }
+  .ic-sinapia{ background:rgba(124,58,237,0.14); }
 
   .link.featured{
-    border:1.5px solid var(--purple);
-    box-shadow:0 8px 20px -10px rgba(123,127,232,0.4);
+    border:1.5px solid var(--violet);
+    box-shadow:0 8px 24px -12px rgba(167,139,250,0.35);
   }
 
   /* ---------- Footer ---------- */
@@ -169,31 +164,60 @@
     width:36px;
     height:3px;
     border-radius:2px;
-    background:linear-gradient(90deg, var(--purple), var(--magenta));
+    background:var(--gradient);
     margin:0 auto 16px;
   }
   .footer-brand{
     font-family:'JetBrains Mono', monospace;
     font-size:11px;
     letter-spacing:0.06em;
-    color:var(--navy-soft);
-    opacity:0.7;
+    color:var(--ink-soft);
+    opacity:0.75;
+  }
+  .footer-credit{
+    font-size:11px;
+    color:var(--ink-soft);
+    opacity:0.55;
+    margin-top:10px;
+  }
+  .footer-credit a{
+    color:inherit;
+    text-decoration:underline;
+    text-decoration-color:rgba(166,166,184,0.35);
   }
 
   @media (max-width:360px){
     body{ padding:36px 14px 48px; }
-    .avatar{ width:76px; height:76px; border-radius:22px; font-size:28px; }
+    .avatar{ width:76px; height:76px; border-radius:22px; }
+    .avatar svg{ width:38px; height:38px; }
   }
 </style>
 </head>
 <body>
 
+  <!-- Gradiente compartido por el isotipo de Sinapia (avatar + ícono de link) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="sinapia-grad" x1="0" y1="0" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#C4B5FD"/>
+        <stop offset="0.5" stop-color="#A78BFA"/>
+        <stop offset="1" stop-color="#22D3EE"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
   <div class="card">
 
     <div class="id-block">
-      <div class="avatar">AA</div>
+      <div class="avatar">
+        <svg viewBox="0 0 64 64" fill="none" role="img" aria-label="Isotipo Sinapia Web">
+          <path d="M22 10c-7 0-12 5-12 12v20c0 7 5 12 12 12" stroke="url(#sinapia-grad)" stroke-width="5" stroke-linecap="round"/>
+          <path d="M42 10c7 0 12 5 12 12v20c0 7-5 12-12 12" stroke="url(#sinapia-grad)" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="32" cy="32" r="4.5" fill="url(#sinapia-grad)"/>
+        </svg>
+      </div>
       <h1>Alexis Adones</h1>
-      <div class="role">Indugift Digital · La Región del Biobío</div>
+      <div class="role">Sinapia Web · La Región del Biobío</div>
       <p class="tagline">Sitios web, agentes con IA y gestión de redes para negocios de La Araucanía y el Biobío.</p>
     </div>
 
@@ -210,24 +234,24 @@
       <span class="arrow">→</span>
     </a>
 
-    <a href="https://www.instagram.com/panoramaslosangeles/" class="link" target="_blank" rel="noopener">
-      <div class="icon ic-instagram">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.02-3.58.07-4.85c.15-3.23 1.67-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zm0 5.34a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.43a2.93 2.93 0 1 1 0-5.86 2.93 2.93 0 0 1 0 5.86zm4.68-7.61a1.05 1.05 0 1 0 0-2.1 1.05 1.05 0 0 0 0 2.1z"/></svg>
+    <a href="https://www.sinapiaweb.cl" class="link" target="_blank" rel="noopener">
+      <div class="icon ic-sinapia">
+        <svg viewBox="0 0 64 64" fill="none"><path d="M22 10c-7 0-12 5-12 12v20c0 7 5 12 12 12" stroke="url(#sinapia-grad)" stroke-width="7" stroke-linecap="round"/><path d="M42 10c7 0 12 5 12 12v20c0 7-5 12-12 12" stroke="url(#sinapia-grad)" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="32" r="6" fill="url(#sinapia-grad)"/></svg>
       </div>
       <div class="link-text">
-        <div class="link-title">Instagram · Panoramas</div>
-        <div class="link-sub">@panoramaslosangeles</div>
+        <div class="link-title">Sinapia Web</div>
+        <div class="link-sub">www.sinapiaweb.cl</div>
       </div>
       <span class="arrow">→</span>
     </a>
 
-    <a href="https://www.instagram.com/indugift3d/" class="link" target="_blank" rel="noopener">
+    <a href="https://www.instagram.com/sinapiaweb/" class="link" target="_blank" rel="noopener">
       <div class="icon ic-instagram">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.02-3.58.07-4.85c.15-3.23 1.67-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zm0 5.34a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.43a2.93 2.93 0 1 1 0-5.86 2.93 2.93 0 0 1 0 5.86zm4.68-7.61a1.05 1.05 0 1 0 0-2.1 1.05 1.05 0 0 0 0 2.1z"/></svg>
       </div>
       <div class="link-text">
-        <div class="link-title">Instagram · Indugift</div>
-        <div class="link-sub">@indugift3d</div>
+        <div class="link-title">Instagram · Sinapia Web</div>
+        <div class="link-sub">@sinapiaweb</div>
       </div>
       <span class="arrow">→</span>
     </a>
@@ -245,6 +269,17 @@
       <span class="arrow">→</span>
     </a>
 
+    <a href="https://www.instagram.com/panoramaslosangeles/" class="link" target="_blank" rel="noopener">
+      <div class="icon ic-instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.02-3.58.07-4.85c.15-3.23 1.67-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zm0 5.34a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.43a2.93 2.93 0 1 1 0-5.86 2.93 2.93 0 0 1 0 5.86zm4.68-7.61a1.05 1.05 0 1 0 0-2.1 1.05 1.05 0 0 0 0 2.1z"/></svg>
+      </div>
+      <div class="link-text">
+        <div class="link-title">Instagram · Panoramas</div>
+        <div class="link-sub">@panoramaslosangeles</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
     <a href="https://indugift.cl" class="link" target="_blank" rel="noopener">
       <div class="icon ic-indugift">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
@@ -252,6 +287,17 @@
       <div class="link-text">
         <div class="link-title">Indugift</div>
         <div class="link-sub">Letreros LED y 3D · cotizador en línea</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <a href="https://www.instagram.com/indugift3d/" class="link" target="_blank" rel="noopener">
+      <div class="icon ic-instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.02-3.58.07-4.85c.15-3.23 1.67-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zm0 5.34a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.43a2.93 2.93 0 1 1 0-5.86 2.93 2.93 0 0 1 0 5.86zm4.68-7.61a1.05 1.05 0 1 0 0-2.1 1.05 1.05 0 0 0 0 2.1z"/></svg>
+      </div>
+      <div class="link-text">
+        <div class="link-title">Instagram · Indugift</div>
+        <div class="link-sub">@indugift3d</div>
       </div>
       <span class="arrow">→</span>
     </a>
@@ -269,7 +315,8 @@
 
     <footer>
       <div class="divider"></div>
-      <div class="footer-brand">INDUGIFT DIGITAL</div>
+      <div class="footer-brand">SINAPIA WEB</div>
+      <div class="footer-credit">Miembro del Directorio de Negocios Panoramas Los Ángeles — <a href="https://panoramaslosangeles.cl/directorio" target="_blank" rel="noopener">www.panoramaslosangeles.cl/directorio</a></div>
     </footer>
 
   </div>
